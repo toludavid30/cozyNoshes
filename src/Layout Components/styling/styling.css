@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    #Nav{
+        background-color: #D1d3ce;
+        z-index: 10000;
+        .navWrapper{
+            .logoWrap{
+                height: 90px;
+                width: 100px;
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .navSearch{
+                width: 30%;
+                
+            }
+            .navRight{
+                width: 20%;
+                display: flex;
+                justify-content: space-between;
+                .navLinks{
+                    text-decoration: none;
+                    color: #626675;
+                }
+            }
+        }
+    }
+}

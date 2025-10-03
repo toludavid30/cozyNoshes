@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    #heroSection{
+        height: auto;
+        background-image: url("/Untitled\ design\ \(2\).png");
+        background-size: cover;
+        background-repeat: no-repeat;
+            .heroWrapper{
+                .foodDisplays{
+                    .foodPic{
+                        height: 50vh;
+                        width: 27vw;        
+                        img{
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                    .foodInfo{
+                        .foodText{
+                            font-family: gotham;
+                            font-weight: bolder;
+                            font-size: 3.5rem;
+                            color: #bb4500;
+                        }
+                        .rating{
+                            height: 50px;
+                            width: 200px;
+                            img{
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                        
+                    }
+                }
+                .foodBoxesContainer{
+                    .foodBoxes{
+                        height: 35vh;
+                        width: 20vw;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        background-color: bisque;
+                        .pic{
+                            height: 60%;
+                            width: 100%;
+                            img{
+                                height: 100%;
+                                width: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+        }
+    }
+}
