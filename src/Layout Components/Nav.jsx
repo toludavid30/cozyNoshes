@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import "./styling/styling.css"
+import "./styling/mediaQuery.css"
 
 
 import React, { useState } from 'react'

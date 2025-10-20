@@ -12,12 +12,14 @@
             .heroWrapper{
                 .foodDisplays{
                     position: relative;
+                    width: 100%;
+                    height: 55vh;
                     clip-path: inset(0 0 0 0);
                     overflow: hidden;
                     .foodPic{
-                        /* position: absolute; */
-                        top: 0;
-                        left: 0;
+                        position: absolute;
+                        top: 3%;
+                        left: 5%;
                         height: 50vh;
                         width: 27vw; 
                         img{
@@ -26,7 +28,10 @@
                         }
                     }
                     .foodInfo{
-                        /* position: absolute; */
+                        position: absolute;
+                        top: 20%;
+                        left: 45%;
+                        /* transform: translate(-50%, -50%); */
                         .foodText{
                             font-family: gotham;
                             font-weight: bolder;
@@ -51,7 +56,6 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: space-evenly;
-                        background-color: #6266754b;
                         .pic{
                             height: 60%;
                             width: 100%;
@@ -63,6 +67,27 @@
                         }
                     }
                 }
+        }
+    }
+
+    #AboutSec{
+        background-image: url(/Cozy.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 70vh;
+        .sectionWrap{
+            height: 100%;
+            backdrop-filter: blur(1px);
+            .leftWrap{
+                .svg{
+                    height: 400px;
+                    width: 500px;
+                }
+            }
+            .rightWrap{
+
+            }
         }
     }
 }

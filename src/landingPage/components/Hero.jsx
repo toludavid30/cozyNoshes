@@ -19,21 +19,38 @@ const Hero = () => {
     const prevHeroFood = useRef(heroFood)
     
     const path = "M200,-150 Q100,75 0,0";
-    const path2 = "M-300,-200 Q-150,-150 0,0"
+    const path2 = "M-400,-250 Q-150,-150 0,0"
+
+    const foodBoxBackgroundON = (elem) =>{
+        const box = document.getElementById(elem)
+        if (box) box.style.backgroundColor = "#6266754b"
+        box.style.transition = "background linear 1s"
+    }
+    const foodBoxBackgroundOFF = (elem) =>{
+        const box = document.getElementById(elem)
+        if (box) box.style.backgroundColor = "transparent"
+    }
 
     useEffect(()=>{
         const prev = prevHeroFood.current
 
         prevHeroFood.current = heroFood;
 
+        foodBoxBackgroundON(heroFood)
+        
+
+
         // Example SVG path: Move to (250,-200), curve to (0,0) with control (125,100)
 
     if(heroFood === "CRAC" && prev !== "CRAC"){
+    
     ////// In animation for CRAC
     setShowCRAC(true)
+    
     }
 
     if(prev === "CRAC" && heroFood !== "CRAC"){
+        foodBoxBackgroundOFF(prev)
         const CRACanimationOut = gsap.timeline({
             onComplete: () => {
                setShowCRAC(false) 
@@ -59,7 +76,7 @@ const Hero = () => {
         x: 100,
         opacity: 0,
         ease: "power2.inOut",
-        duration: 2
+        duration: 1.5
     }, "-=75%")
         CRACanimationOut.play()
     }
@@ -72,6 +89,7 @@ const Hero = () => {
     ///PYAE animation out
 
     if(prev === "PYAE" && heroFood !== "PYAE"){
+        foodBoxBackgroundOFF(prev)
         const PYAEanimationOut = gsap.timeline({
             onComplete: () => {
                setShowPYAE(false)
@@ -82,7 +100,7 @@ const Hero = () => {
         PYAEanimationOut.to(".PYAEpic",
     {
         opacity: 1,
-        duration: 2,
+        duration: 1.5,
         motionPath:{
             path: path2,
             type: "soft",
@@ -97,9 +115,87 @@ const Hero = () => {
         x: 100,
         opacity: 0,
         ease: "power2.inOut",
-        duration: 2
+        duration: 1.5
     }, "-=75%")
         PYAEanimationOut.play()
+    }
+
+    if(heroFood === "SFAC" && prev !== "SFAC"){
+    ///SFAC animation in
+    setShowSFAC(true)
+    }
+
+    ///SFAC animation out
+
+    if(prev === "SFAC" && heroFood !== "SFAC"){
+        foodBoxBackgroundOFF(prev)
+        const SFACanimationOut = gsap.timeline({
+            onComplete: () => {
+               setShowSFAC(false)
+            }
+        })
+        
+        //SFAC out animation 
+        SFACanimationOut.to(".SFACpic",
+    {
+        opacity: 1,
+        duration: 1.5,
+        motionPath:{
+            path: path2,
+            type: "soft",
+            align: false
+            // curviness: 3
+        },
+        reversed: true,
+        ease: "power2.inOut",
+    })
+    
+    SFACanimationOut.to(".SFACinfo", {
+        x: 100,
+        opacity: 0,
+        ease: "power2.inOut",
+        duration: 1.5
+    }, "-=75%")
+        SFACanimationOut.play()
+    }
+
+    if(heroFood === "FRAC" && prev !== "FRAC"){
+    ///FRAC animation in
+    setShowFRAC(true)
+    }
+
+    ///FRAC animation out
+
+    if(prev === "FRAC" && heroFood !== "FRAC"){
+        foodBoxBackgroundOFF(prev)
+        const FRACanimationOut = gsap.timeline({
+            onComplete: () => {
+               setShowFRAC(false)
+            }
+        })
+        
+        //FRAC out animation 
+        FRACanimationOut.to(".FRACpic",
+    {
+        opacity: 1,
+        duration: 1.5,
+        motionPath:{
+            path: path2,
+            type: "soft",
+            align: false
+            // curviness: 3
+        },
+        reversed: true,
+        ease: "power2.inOut",
+    })
+    
+    FRACanimationOut.to(".FRACinfo", {
+        x: 100,
+        opacity: 0,
+        ease: "power2.inOut",
+        duration: 1.5
+    }, "-=75%")
+        FRACanimationOut.play()
     }
         
     },[heroFood])
@@ -161,17 +257,68 @@ const Hero = () => {
     PYAEanimationIn.play();
     },[showPYAE])
     useEffect(()=>{
+    
+    gsap.set(".SFACpic", { x: 200, y: -100, opacity: 0 });
+    gsap.set(".SFACinfo", { x: 100, opacity: 0 });
 
-    },[])
+    const SFACanimationIn = gsap.timeline()
+
+    SFACanimationIn.to(".SFACpic",
+    {
+        opacity: 1,
+        duration: 2,
+        motionPath:{
+            path: path,
+            type: "soft",
+            align: false
+            // curviness: 3
+        },
+        ease: "power2.inOut"
+    })
+    SFACanimationIn.to(".SFACinfo", {
+        x: 0,
+        opacity: 1,
+        ease: "power2.inOut",
+        duration: 2
+    }, "-=75%")
+
+    SFACanimationIn.play();
+    },[showSFAC])
+
     useEffect(()=>{
 
-    },[])
-  return (
-    <div id='heroSection'>
-        <div className="heroWrapper container py-4">
+    gsap.set(".FRACpic", { x: 200, y: -100, opacity: 0 });
+    gsap.set(".FRACinfo", { x: 100, opacity: 0 });
 
-            <div className="foodDisplays d-flex align-items-center justify-content-evenly p-4">
-                {
+    const FRACanimationIn = gsap.timeline()
+
+    FRACanimationIn.to(".FRACpic",
+    {
+        opacity: 1,
+        duration: 2,
+        motionPath:{
+            path: path,
+            type: "soft",
+            align: false
+            // curviness: 3
+        },
+        ease: "power2.inOut"
+    })
+    FRACanimationIn.to(".FRACinfo", {
+        x: 0,
+        opacity: 1,
+        ease: "power2.inOut",
+        duration: 2
+    }, "-=75%")
+
+    FRACanimationIn.play();
+    },[showFRAC])
+  return (
+    <div id='heroSection' className="py-4">
+        <div className="heroWrapper container">
+
+            <div className="foodDisplays d-flex align-items-center justify-content-evenly">
+            {
                 showCRAC && (
                 <>
                     <div id="CRACpic" className="foodPic CRACpic py-2">
