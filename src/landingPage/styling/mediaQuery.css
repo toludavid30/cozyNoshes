@@ -81,11 +81,11 @@
     left: 50%;
     transform: translateX(-50%);
     width: 85vw;
-    height: 25vh;
+    height: 30vh;
   }
 
   #heroSection .heroWrapper .foodDisplays .foodInfo {
-    top: 75%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 94%;
@@ -107,7 +107,7 @@
     flex-shrink: 0 !important;
     font-size: smaller;
     .info{
-        font-size: smaller;
+        font-size: small;
     }
   }
 
