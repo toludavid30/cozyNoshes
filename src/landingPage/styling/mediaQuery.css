@@ -103,13 +103,16 @@
   }
   #heroSection .heroWrapper .foodBoxesContainer .foodBoxes {
     height: 20vh;
-    width: 35vw;
+    width: 40vw;
     flex-shrink: 0 !important;
     font-size: smaller;
+    .info{
+        font-size: smaller;
+    }
   }
 
    #AboutSec {
-        height: 45vh;
+        height: auto;
         background-size: 140%;
         background-position: top center;
     }
@@ -123,15 +126,15 @@
     #AboutSec .sectionWrap .rightWrap {
         padding: 1rem;
         width: 100%;
-        h2, h5{
+        h5{
             font-size: 0.9rem;
         }
         
     }
     #AboutSec .sectionWrap .leftWrap{
         .svg{
-            height: 200px;
-            width: 300px;
+            height: 170px;
+            width: 250px;
         }
     }
 }
