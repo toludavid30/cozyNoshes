@@ -386,7 +386,7 @@ const Hero = () => {
                 )}
 
             </div>
-            <div id="foodBoxesContainer" className="foodBoxesContainer d-flex flex-wrapp justify-content-between">
+            <div id="foodBoxesContainer" className="foodBoxesContainer d-flex flex-wrapp justify-content-between py-3 py-md-0">
                 <div id="CRAC" className="foodBoxes rounded rounded-4 py-2 btn" onClick={() =>
                 setHeroFood("CRAC")}>
                     <div className="pic">
