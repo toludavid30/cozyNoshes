@@ -103,7 +103,7 @@
   }
   #heroSection .heroWrapper .foodBoxesContainer .foodBoxes {
     height: 20vh;
-    width: 40vw;
+    width: 35vw;
     flex-shrink: 0 !important;
     font-size: smaller;
     .info{
