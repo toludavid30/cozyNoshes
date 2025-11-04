@@ -14,15 +14,15 @@
                 .foodDisplays{
                     position: relative;
                     width: 100%;
-                    height: 55vh;
+                    height: 57vh;
                     clip-path: inset(0 0 0 0);
                     overflow: hidden;
                     .foodPic{
                         position: absolute;
                         top: 3%;
                         left: 5%;
-                        height: 50vh;
-                        width: 27vw; 
+                        height: 52vh;
+                        width: 25vw; 
                         img{
                             height: 100%;
                             width: 100%;
@@ -36,7 +36,7 @@
                         .foodText{
                             font-family: gotham;
                             font-weight: bolder;
-                            font-size: 3.5rem;
+                            font-size: 3.3rem;
                             color: #bb4500;
                         }
                         .rating{
@@ -76,7 +76,7 @@
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-        height: 70vh;
+        height: auto;
         .sectionWrap{
             height: 100%;
             backdrop-filter: blur(1.8px);
@@ -106,4 +106,6 @@
             }
         }
     }
+
+
 }

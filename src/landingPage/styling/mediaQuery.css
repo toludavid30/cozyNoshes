@@ -3,14 +3,14 @@
 /* Tablet / small desktop */
 @media (max-width: 1024px) {
   #heroSection .heroWrapper .foodDisplays {
-    height: 45vh;
+    height: 37vh;
   }
 
   #heroSection .heroWrapper .foodDisplays .foodPic {
     /* top: 4%; */
     left: 3%;
-    height: 45vh;
-    width: 34vw;
+    height: 32vh;
+    width: 35vw;
   }
 
   #heroSection .heroWrapper .foodDisplays .foodInfo {
@@ -19,12 +19,12 @@
   }
 
   #heroSection .heroWrapper .foodDisplays .foodInfo .foodText {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 
   #heroSection .heroWrapper .foodBoxesContainer .foodBoxes {
     height: 25vh;
-    width: 24vw;
+    width: 40vw;
   }
 }
 

@@ -10,7 +10,7 @@ const About = () => {
     // )
   return (
     <div id='AboutSec' className=''>
-        <div className="sectionWrap py-3 container d-flex justify-content-between">
+        <div className="sectionWrap py-3 py-md-5 container d-flex justify-content-between">
             
             <div className="rightWrap">
                 <h2 data-aos="fade-up"> 

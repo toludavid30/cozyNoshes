@@ -5,6 +5,7 @@
     #Nav{
         background-color: #D1d3ce;
         z-index: 10000;
+        position: sticky;
         .navWrapper{
             .logoWrap{
                 height: 90px;

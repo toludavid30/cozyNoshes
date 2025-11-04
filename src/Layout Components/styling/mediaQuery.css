@@ -4,7 +4,7 @@
             height: 70px !important;
             width: 80px !important;
         }        .navRight{
-            width: 60% !important;
+            width: 65% !important;
             .navLinks{
                 font-size: smaller;
             }
@@ -12,10 +12,10 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1024px) {
     #Nav{
            .navRight{
-            width: 60% !important;
+            width: 50% !important;
         }
     }
 }
