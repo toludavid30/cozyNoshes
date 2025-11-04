@@ -11,15 +11,15 @@ const Nav = () => {
     
   return (
     <div id="Nav"className="py-2">
-        <div className="navWrapper container d-flex align-items-center justify-content-between">
+        <div className="navWrapper container d-flex align-items-center justify-content-betweenn">
             <Link className="logoWrap" to="/">
                 <img src="/Cozy__1_-removebg-preview.png" alt="" />
             </Link>
-            <div className="navSearch input-group">
+            {/* <div className="navSearch input-group">
                 <span className='input-group-text'><i className="bi bi-search"></i></span>
                 <input type="text" className="form-control border border-2"/>
-            </div>
-            <div className="navRight d-none d-md-flex">
+            </div> */}
+            <div className="navRight rounded rounded-5 py-2 py-md-3 px-4 px-md-5 d-nonee d-md-flex">
                 <Link className="navLinks" to="">
                     Menu
                 </Link>
@@ -32,7 +32,7 @@ const Nav = () => {
                     Contact us
                 </Link>
             </div>
-            <button
+            {/* <button
                         className="h-100 dropdown navbar-toggler d-md-none fs-4"
                         type="button"
                         aria-label="Toggle navigation"
@@ -58,7 +58,7 @@ const Nav = () => {
                             }      
                             </li>
                         </ul>
-            </button>
+            </button> */}
         </div>
     </div>
   )

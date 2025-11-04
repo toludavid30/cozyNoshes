@@ -1,0 +1,21 @@
+@media (max-width: 480px) {
+    #Nav{
+        .logoWrap{
+            height: 70px !important;
+            width: 80px !important;
+        }        .navRight{
+            width: 60% !important;
+            .navLinks{
+                font-size: smaller;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    #Nav{
+           .navRight{
+            width: 60% !important;
+        }
+    }
+}
